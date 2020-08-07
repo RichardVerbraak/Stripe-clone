@@ -5,9 +5,10 @@
 		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 		[center-end]
 		minmax(6rem, 1fr) [full-end];
-	background-color: red;
+	grid-template-rows: 86rem;
+	background-color: orangered;
 }
 
-.test-1 {
-	grid-column: col-start 1 / col-end 8;
+.content-container {
+	grid-column: center-start / center-end;
 }

@@ -23,15 +23,92 @@ body {
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  background-color: red;
+  -ms-grid-rows: 86rem;
+      grid-template-rows: 86rem;
+  background-color: orangered;
 }
 
-.test-1 {
-  grid-column: col-start 1 / col-end 8;
+.content-container {
+  grid-column: center-start / center-end;
 }
 
 .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  grid-column: center-start / center-end;
   font-size: 1.5rem;
   color: #fff;
+}
+
+.navbar__logo {
+  font-size: 2.2rem;
+}
+
+.navbar__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar__items--item {
+  list-style: none;
+}
+
+.navbar__items--item:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.navbar__sign-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 7rem;
+  padding: 1.2rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+}
+
+.header__text--h1 {
+  font-size: 7rem;
+  font-weight: 500;
+  color: #3a3a3a;
+}
+
+.header__text--paragraph {
+  color: #425466;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.btn__sign-in {
+  background-color: transparent;
+  color: #fff;
+  font-family: inherit;
+  border: none;
+  padding: 0.5rem;
+}
+
+.btn__sign-in:focus {
+  outline: none;
+}
+
+.btn__right-arrow {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 0;
 }
 /*# sourceMappingURL=main.css.map */
