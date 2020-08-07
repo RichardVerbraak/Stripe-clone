@@ -1,0 +1,21 @@
+$primary-color: #3a3a3a;
+$secondary-color: #425466;
+$link-color: #635bff;
+
+*,
+*::before,
+*::after {
+	box-sizing: content-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #f7f7f7;
+}
