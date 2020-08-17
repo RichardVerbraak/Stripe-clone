@@ -48,9 +48,9 @@ body {
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 13.5rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 13.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 13.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  -ms-grid-rows: min-content 80vh;
-      grid-template-rows: -webkit-min-content 80vh;
-      grid-template-rows: min-content 80vh;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
   background-color: #fff;
 }
 
@@ -128,16 +128,26 @@ body {
 
 .header {
   grid-column: col-start 1 / col-end 6;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr min-content;
+      grid-template-rows: 1fr 1fr -webkit-min-content;
+      grid-template-rows: 1fr 1fr min-content;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
-.header__text--h1 {
+.header__h1 {
+  grid-column: 1 / -1;
   font-size: 7rem;
   font-weight: 800;
   color: #3a3a3a;
   width: 70%;
 }
 
-.header__text--paragraph {
+.header__paragraph {
+  grid-column: 1 / -1;
   color: #425466;
   font-size: 1.8rem;
   font-weight: 300;

@@ -1,20 +1,24 @@
 .header {
 	grid-column: col-start 1 / col-end 6;
+	display: grid;
+	grid-template-rows: 1fr 1fr min-content;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
 
-	&__text {
-		&--h1 {
-			font-size: 7rem;
-			font-weight: 800;
-			color: $primary-color;
-			width: 70%;
-		}
+	&__h1 {
+		grid-column: 1 / -1;
+		font-size: 7rem;
+		font-weight: 800;
+		color: $primary-color;
+		width: 70%;
+	}
 
-		&--paragraph {
-			color: $secondary-color;
-			font-size: 1.8rem;
-			font-weight: 300;
-			width: 50%;
-		}
+	&__paragraph {
+		grid-column: 1 / -1;
+		color: $secondary-color;
+		font-size: 1.8rem;
+		font-weight: 300;
+		width: 50%;
 	}
 
 	&__image {
