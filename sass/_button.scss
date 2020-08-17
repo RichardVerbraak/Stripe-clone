@@ -1,20 +1,31 @@
-// Refactor button sign in
+// Center arrow with text somehow
 
 .btn {
 	&__sign-in {
-		background-color: transparent;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 7rem;
+		padding: 0.8rem 1.4rem;
+		border-radius: 25px;
+		border: none;
+
+		background-color: rgba(255, 255, 255, 0.2);
 		color: #fff;
 		font-family: inherit;
-		border: none;
-		padding: 0.5rem;
+		cursor: pointer;
 
 		&:focus {
 			outline: none;
 		}
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.45);
+		}
 	}
 
 	&__right-arrow {
-		font-size: 2.5rem;
+		font-size: 2.6rem;
 		font-weight: 300;
 		line-height: 0;
 	}
