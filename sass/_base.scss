@@ -2,6 +2,20 @@ $primary-color: #3a3a3a;
 $secondary-color: #425466;
 $link-color: #635bff;
 
+@keyframes GradientBackground {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 *,
 *::before,
 *::after {
