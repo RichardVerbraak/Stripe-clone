@@ -42,13 +42,25 @@ body {
 }
 
 .container {
+  position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
-      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  -ms-grid-rows: 86rem;
-      grid-template-rows: 86rem;
+  -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 13.5rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 13.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 13.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  -ms-grid-rows: min-content 80vh;
+      grid-template-rows: -webkit-min-content 80vh;
+      grid-template-rows: min-content 80vh;
+  background-color: #fff;
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88rem;
+  z-index: -1000;
   background: linear-gradient(45deg, #a960ee, #ff333d, #90e0ff, #ffcb57);
   background-size: 600% 600%;
   -webkit-animation: GradientBackground 10s ease infinite;
@@ -57,11 +69,8 @@ body {
           clip-path: polygon(0 0, 100% 0%, 100% 20%, 0 67%);
 }
 
-.content-container {
-  grid-column: center-start / center-end;
-}
-
 .navbar {
+  grid-column: center-start / center-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,7 +81,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
-  grid-column: center-start / center-end;
+  margin-bottom: 16rem;
   font-size: 1.5rem;
   color: #fff;
 }
@@ -117,16 +126,22 @@ body {
   border-radius: 25px;
 }
 
+.header {
+  grid-column: col-start 1 / col-end 6;
+}
+
 .header__text--h1 {
   font-size: 7rem;
-  font-weight: 500;
+  font-weight: 800;
   color: #3a3a3a;
+  width: 70%;
 }
 
 .header__text--paragraph {
   color: #425466;
   font-size: 1.8rem;
   font-weight: 300;
+  width: 50%;
 }
 
 .btn__sign-in {

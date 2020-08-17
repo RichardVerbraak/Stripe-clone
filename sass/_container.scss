@@ -1,20 +1,14 @@
+// 8 Columns of 13.5rem = 1080 width container for the content
 .container {
+	position: relative;
 	display: grid;
 	grid-template-columns:
 		[full-start] minmax(6rem, 1fr)
-		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+		[center-start] repeat(8, [col-start] minmax(min-content, 13.5rem) [col-end])
 		[center-end]
 		minmax(6rem, 1fr) [full-end];
-	grid-template-rows: 86rem;
 
-	// My attempt at their gradient
-	background: linear-gradient(45deg, #a960ee, #ff333d, #90e0ff, #ffcb57);
-	background-size: 600% 600%;
-	animation: GradientBackground 10s ease infinite;
+	grid-template-rows: min-content 80vh;
 
-	clip-path: polygon(0 0, 100% 0%, 100% 20%, 0 67%);
-}
-
-.content-container {
-	grid-column: center-start / center-end;
+	background-color: #fff;
 }
