@@ -1,26 +1,52 @@
 // Center arrow with text somehow
 
 .btn {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	padding: 0.8rem 1.4rem;
+	border-radius: 25px;
+	border: none;
+	color: #fff;
+	font-family: inherit;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
 	&__sign-in {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		width: 7rem;
-		padding: 0.8rem 1.4rem;
-		border-radius: 25px;
-		border: none;
-
 		background-color: rgba(255, 255, 255, 0.2);
-		color: #fff;
-		font-family: inherit;
-		cursor: pointer;
-
-		&:focus {
-			outline: none;
-		}
 
 		&:hover {
 			background-color: rgba(255, 255, 255, 0.45);
+		}
+	}
+
+	&__header {
+		width: 8.8rem;
+		background-color: #0a2540;
+
+		&:hover {
+			background-color: rgba(10, 37, 64, 0.6);
+		}
+	}
+
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 1.4rem;
+		background-color: transparent;
+		color: #0a2540;
+		width: 12rem;
+
+		cursor: pointer;
+
+		&:hover {
+			color: rgba(10, 37, 64, 0.6);
 		}
 	}
 

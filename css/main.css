@@ -48,9 +48,6 @@ body {
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 13.5rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 13.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 13.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  -ms-grid-rows: min-content;
-      grid-template-rows: -webkit-min-content;
-      grid-template-rows: min-content;
   background-color: #fff;
 }
 
@@ -83,6 +80,7 @@ body {
   margin-top: 2rem;
   margin-bottom: 16rem;
   font-size: 1.5rem;
+  font-weight: 500;
   color: #fff;
 }
 
@@ -130,9 +128,9 @@ body {
   grid-column: col-start 1 / col-end 6;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr min-content;
-      grid-template-rows: 1fr 1fr -webkit-min-content;
-      grid-template-rows: 1fr 1fr min-content;
+  -ms-grid-rows: 1fr min-content min-content;
+      grid-template-rows: 1fr -webkit-min-content -webkit-min-content;
+      grid-template-rows: 1fr min-content min-content;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
@@ -154,7 +152,56 @@ body {
   width: 50%;
 }
 
+.header__buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content min-content;
+      grid-template-columns: -webkit-min-content -webkit-min-content;
+      grid-template-columns: min-content min-content;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.8rem 1.4rem;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
 .btn__sign-in {
+  width: 7rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn__sign-in:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.btn__header {
+  width: 8.8rem;
+  background-color: #0a2540;
+}
+
+.btn__header:hover {
+  background-color: rgba(10, 37, 64, 0.6);
+}
+
+.btn__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,22 +211,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 7rem;
-  padding: 0.8rem 1.4rem;
-  border-radius: 25px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  font-family: inherit;
+  font-size: 1.4rem;
+  background-color: transparent;
+  color: #0a2540;
+  width: 12rem;
   cursor: pointer;
 }
 
-.btn__sign-in:focus {
-  outline: none;
-}
-
-.btn__sign-in:hover {
-  background-color: rgba(255, 255, 255, 0.45);
+.btn__link:hover {
+  color: rgba(10, 37, 64, 0.6);
 }
 
 .btn__right-arrow {
